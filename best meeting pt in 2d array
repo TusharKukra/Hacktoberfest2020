@@ -1,0 +1,49 @@
+# Python program to find best meeting point in 2D array 
+ROW = 3
+COL = 5
+
+def minTotalDistance(grid: list) -> int: 
+	if ROW == 0 or COL == 0: 
+		return 0
+
+	vertical = [] 
+	horizontal = [] 
+
+	# Find all members home's position 
+	for i in range(ROW): 
+		for j in range(COL): 
+			if grid[i][j] == 1: 
+				vertical.append(i) 
+				horizontal.append(j) 
+
+	# Sort positions so we can find most 
+	# beneficial point 
+	vertical.sort() 
+	horizontal.sort() 
+
+	# middle position will always beneficial 
+	# for all group members but it will be 
+	# sorted which we have alredy done 
+	size = len(vertical) // 2
+	x = vertical[size] 
+	y = horizontal[size] 
+
+	# Now find total distance from best meeting 
+	# point (x,y) using Manhattan Distance formula 
+	distance = 0
+	for i in range(ROW): 
+		for j in range(COL): 
+			if grid[i][j] == 1: 
+				distance += abs(x - i) + abs(y - j) 
+
+	return distance 
+
+# Driver Code 
+if __name__ == "__main__": 
+
+	grid = [[1, 0, 1, 0, 1], 
+			[0, 1, 0, 0, 0], 
+			[0, 1, 1, 0, 0]] 
+	print(minTotalDistance(grid)) 
+
+
