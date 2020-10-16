@@ -1,0 +1,68 @@
+// C++ program to implement 
+// fascinating number
+#include <bits/stdc++.h>
+using namespace std;
+ 
+// function to check if number
+// is fascinating or not
+bool isFascinating(int num)
+{
+    // frequency count array 
+    // using 1 indexing
+    int freq[10] = {0};
+ 
+    // obtaining the resultant number
+    // using string concatenation
+    string val = "" + to_string(num) + 
+                      to_string(num * 2) + 
+                      to_string(num * 3);
+ 
+    // Traversing the string 
+    // character by character
+    for (int i = 0; i < val.length(); i++) 
+    {
+ 
+        // gives integer value of 
+        // a character digit
+        int digit = val[i] - '0';
+ 
+        // To check if any digit has
+        // appeared multiple times
+        if (freq[digit] and digit != 0 > 0)
+            return false;
+        else
+            freq[digit]++;
+    }
+ 
+    // Traversing through freq array to
+    // check if any digit was missing
+    for (int i = 1; i < 10; i++) 
+    {
+        if (freq[i] == 0)
+            return false;
+    }
+    return true;
+}
+ 
+// Driver code
+int main()
+{
+    // Input number
+    int num = 192;
+ 
+    // Not a valid number
+    if (num < 100)
+        cout << "No" << endl;
+ 
+    else
+    {
+        // Calling the function to 
+        // check if input number 
+        // is fascinating or not
+        bool ans = isFascinating(num);
+        if (ans)
+            cout << "Yes";
+        else
+            cout << "No";
+    }
+}
