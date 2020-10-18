@@ -1,4 +1,8 @@
-#include<bits/stdc++.h>
+Insertion sort Implementation in C++:
+
+#include <stdlib.h>
+#include <iostream>
+
 using namespace std;
 
 //member functions declaration
