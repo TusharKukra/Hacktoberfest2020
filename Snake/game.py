@@ -110,8 +110,8 @@ def display_final_score(display_text, final_score):
 if __name__ == "__main__":
     
 ###### initialize required parameters ########  
-    display_width = 500
-    display_height = 500
+    display_width =500
+    display_height =500
     green = (0,255,0)
     red = (255,0,0)
     black = (0,0,0)
