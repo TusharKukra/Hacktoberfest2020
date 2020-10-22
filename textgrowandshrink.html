@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>dynamic style demo</title>
+        <style>.button{font-size: 5em; border-radius:25%};</style>
+        <script type="text/javascript">
+        Begin_txt_size=0;
+        End_txt_size=200;
+        txt1=200;
+        txt2=0;
+        function grow_function()
+        {
+        if(Begin_txt_size<End_txt_size)
+        {
+        msg.style.fontSize=Begin_txt_size;
+        Begin_txt_size++;
+        timer=setTimeout("grow_function()",50);
+        }
+        }
+        function shrink_function()
+        {
+        if(txt1>txt2)
+        {
+        msg.style.fontSize=txt1;
+        txt1--;
+        timer=setTimeout("shrink_function()",50);
+        }
+        }
+        function stoptimer()
+        {
+        clearTimeout(timer);
+        }
+        </script>
+    </head>
+    <body style="background-color: lightslategrey; color: indianred;">
+        <form name="form1">
+        <input type="button" class="button" name="button1" value="Grow" onclick="grow_function()">
+        <input type="button" class="button" name="button2" value="Shrink" onclick="shrink_function()">
+        </form>
+        <p id="msg"> Wonderful text effect! </p>
+    </body>
+<html>
