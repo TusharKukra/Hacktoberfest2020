@@ -1,0 +1,12 @@
+l=[]
+n=input('Enter armstrong number')
+no=int(n)
+for i in n:
+    k=int(i)
+    t=k**3
+    l.append(t)
+if no==sum(l):
+    print(no,'is a Armstrong number')
+else:
+    print(no,'is not a Armstrong number')
+
