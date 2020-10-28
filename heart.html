@@ -1,0 +1,74 @@
+<style>
+    .back {
+      position: fixed;
+      padding: 0;
+      margin:auto;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      animation-name: backdiv;
+      animation-duration: 1s; 
+      animation-iteration-count: infinite;
+      
+    }
+  
+    .heart {
+      position: fixed;
+      margin-left:-250px ;
+      margin-top:-250px ;
+      top: 50%;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: pink;
+      height: 500px;
+      width: 500px;
+      transform: rotate(-45deg);
+      animation-name: beat;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    .heart:after {
+      background-color: pink;
+      content: "";
+      border-radius: 500%;
+      position: absolute;
+      width: 500px;
+      height: 500px;	
+      top: -250px;
+      left: 0%;
+    }
+    .heart:before {
+      background-color: pink;
+      content: "";
+      border-radius: 500%;
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      top: 0%;
+      left: 250px;
+    }
+  
+  
+    @keyframes backdiv {
+      50% {
+        background: #ffe6f2;
+      }
+    }
+  
+    @keyframes beat {
+      0% {
+        transform: scale(1) rotate(-45deg);
+      }
+      50% {
+        transform: scale(0.6) rotate(-45deg);
+      }
+    }
+  
+  </style>
+  <html>
+  <div class="back"></div>
+  <div class="heart"></div>
+  </html>
