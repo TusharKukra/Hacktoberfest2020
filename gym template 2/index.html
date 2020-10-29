@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Fitness</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    /* css reset */
+    body {
+        font-family: 'Baloo Bhai 2', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url(img/adult-1850925_1920.jpg);
+    }
+
+    .left {
+        left: 55px;
+        position: absolute;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid red; */
+    }
+
+    .mid {
+        display: block;
+        width: 47%;
+        margin: 20px auto;
+        /* border: 2px solid green; */
+    }
+
+    .right {
+        position: absolute;
+        right: 15px;
+        top: 29px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 22px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 10px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+    }
+
+    .left img {
+        width: 80px;
+        filter: invert(100%);
+        display: block;
+        margin: auto;
+    }
+
+    .left div {
+        text-align: center;
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai 2', cursive;
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(39, 34, 34);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 110px 149px;
+        padding: 45px;
+        width: 33%;
+        border-radius: 50px;
+    }
+    .form-group input{
+        font-family: 'Baloo Bhai 2', cursive;
+        text-align: center;
+        display: block;
+        width: 413px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 6px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .container button{
+        display: block;
+        width: 20%;
+        margin:auto
+    }
+</style>
+
+<body>
+    <header class="header">
+
+        <div class="left">
+            <img src="img/silhouette-3613840_1280.png" alt="">
+            <div>
+                Harry Fitness
+            </div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Join the Best Gym of Delhi Now </h2>
+        <form action="noaction.php">
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Name">
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Age">
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Gender">
+        <div class="form-group">
+            <input type="text" name="" placeholder="Enter your Locality">
+         </div>
+            <button class="btn">Submit</button>
+        </form>
+       
+    </div>
+</body>
+
+</html>
