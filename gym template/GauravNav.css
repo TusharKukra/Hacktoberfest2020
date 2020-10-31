@@ -1,0 +1,59 @@
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #272727;
+            /*display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;*/
+        }
+        
+        .btn {
+            position: relative;
+            display: flex;
+            float: right;
+            width: 80px;
+            height: 100px;
+            padding-top: 20px;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+            /*border: 3px solid #fff;*/
+        }
+        .btn-burger {
+            width: 50px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+        .btn-burger::before, .btn-burger::after{
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 6px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+        }
+        .btn-burger::before{
+            transform: translateY(-16px);
+        }
+        .btn-burger::after{
+            transform: translateY(16px);
+        }
+        .btn.open .btn-burger{
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+        }
+        .btn.open .btn-burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+        .btn.open .btn-burger::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
